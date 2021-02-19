@@ -1,2 +1,8 @@
-# to-do_list
-To-Do List app.
+<h2 align="left">To-Do List</h2>
+<p align="left"></p>
+
+<h2 align="left">What did I use?</h2>
+<p align="left">I used HTML5 for markup and CSS3 to style the app. I used javascrpit to add the functionality and the magic 🔮✨.</p>
+
+<h2 align="left">Results</h2>
+<p align="left">I am proud of the results, I was able to applied my knowledge and get more comfortable writing javascript.</p>
