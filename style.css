@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+body, input, button{
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: #F7F4F4;
+}
+
+.noFill{
+    fill: none;
+}
+
+.header{
+    background-color: #F19192;
+    border-radius: 0 0 20px 20px;
+    height: 85px;
+    left: 0;
+    padding: 15px;
+    /* position: fixed; */
+    top: 0;
+    width: 100%;
+    z-index: 5;
+}
+
+.header__input{
+    background-color: rgb(255,255,255, 0.13);
+    border: 0;
+    border-radius: 5px 25px 25px 5px;
+    box-shadow: none;
+    color: #fff;
+    float: left;
+    font-size: 15px;
+    font-weight: 700;
+    text-indent: 25px;
+    height: 50px;
+    outline: none;
+    width: 100%;
+    padding: 0 60px 0 0;
+
+    -webkit-appearance: none;
+    -moz-appearence: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+}
+
+.header__input::-webkit-input-placeholder{
+    color:  rgb(255,255,255, 0.40)
+}
+.header__input:-moz-input-placeholder{
+    color:  rgb(255,255,255, 0.40)
+}
+.header__input:-moz-input-placeholder{
+    color:  rgb(255,255,255, 0.40)
+}
+.header__input::-ms-input-placeholder{
+    color:  rgb(255,255,255, 0.40)
+}
+
+.header__button{
+    background-color: #fff;
+    border-radius: 25px;
+    border: 0px;
+    box-shadow: none;
+    cursor: pointer;
+    height: 50px;
+    outline: none;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    width: 50px;
+    z-index: 2;
+
+    -webkit-appearance: none;
+    -moz-appearence: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+}
+
+.header svg{
+    width: 16px;
+    height: 16px;
+    float: center;
+}
+
+.header__svg-color{
+    fill: #F19192;
+}
+
+.container{
+    width: 100%;
+    float: left;
+    padding: 15px;
+}
+.container__to-do{
+    width: 100%;
+    float: left;
+}
+
+.container__to-do li{
+    width: 100%;
+    float: left;
+    min-height: 50px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 1px 2px rgba(44,62,80,0.10);
+    margin-bottom: 10px;
+    position: relative;
+    padding: 14px 100px 14px 14px;
+    font-size: 14px;
+    color: #707070;
+    line-height: 22px;
+}
+
+.container__to-do li:last-of-type{
+    margin: 0;
+}
+
+.to-do__buttons{
+    width: 100px;
+    height: 50px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.to-do__buttons button{
+    width: 50px;
+    height: 50px;
+    float: left;
+    background: none;
+    border: 0;
+    outline: none;
+    box-shadow: none;
+    position: relative;
+
+    -webkit-appearance: none;
+    -moz-appearence: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+}
+
+.to-do__buttons button:last-of-type:before{
+    background-color: #edf0f1;
+    content:'';
+    height: 30px;
+    left: 0;
+    position: absolute;
+    top: 10px;
+    width: 1px;
+}
+
+.buttons__remove svg, .buttons__complete svg{
+    cursor: pointer;
+    height: 22px;
+    left: 50%;
+    margin: -11px 0 0 -11px;
+    position: absolute;
+    top: 50%;
+    width: 22px;
+}
+
+.buttons__remove svg .fill{
+    fill: #c0cecb;
+}
+
+.buttons__remove svg:hover .fill{
+    fill: #e85656;
+}
+
+.buttons__complete svg{
+    border-radius: 11px;
+    border: 1.5px solid #F19192;
+}
+.buttons__complete svg .fill{
+    fill: #F19192;
+}
+
+ul#container__completed .buttons__complete svg{
+    background-color: #F19192;
+    border: 0;
+}
+ul#container__completed .buttons__complete svg .fill{
+    fill: #fff;
+}
+
+ul:not(#container__completed) .buttons__complete svg:hover{
+    background-color: #F19192;
+    border: 0;
+}
+
+ul:not(#container__completed) .buttons__complete svg:hover .fill{
+    fill:#fff;
+}
+
+ul.container__to-do#container__completed{
+    position: relative;
+    padding-top: 60px;
+}
+ul.container__to-do#container__completed:before {
+    content: '';
+    width: 150px;
+    height: 1px;
+    background: #d8e5e0;
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    margin: 0 0 0 -75px;
+}
+
+#container__completed:empty:after {
+    content: 'Let´s do something!';
+}
+
+#container__to-do:empty:after {
+    content: 'Nothing to-do';
+    margin: 15px 0 0 0;
+}
+
+#container__completed:after,
+#container__to-do:after{
+    width: 100%;
+    display: block;
+    text-align: center;
+    color: #aaa;
+    font-size: 12px;
+}
